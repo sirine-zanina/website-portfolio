@@ -20,6 +20,7 @@ export default function Hero() {
             <span className="text-teal-500 dark:text-teal-400">Sirine</span>.{" "}
             I'm a developer and a computer science student.
           </h1>
+
           <div className="order-1 md:order-2">
             <Image
               alt="Sirine Zanina"
@@ -45,8 +46,8 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-80 animate-bounce">
-        <RiArrowDownSLine className="text 3xl text-primary " />
+      <div className="flex justify-center mt-12 md:mt-24">
+        <RiArrowDownSLine className="text-3xl animate-bounce" />
       </div>
     </div>
   );

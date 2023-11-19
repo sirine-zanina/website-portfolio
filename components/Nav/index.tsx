@@ -78,9 +78,9 @@ export default function Nav() {
         <nav className="hidden space-x-8 text-lg md:flex">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
+          <NavItem href="/skills" text="Skills" />
           <NavItem href="/projects" text="Projects" />
           <NavItem href="/contact" text="Contact" />
-          <NavItem href="/community-wall" text="Community wall" />
         </nav>
         <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
           <button

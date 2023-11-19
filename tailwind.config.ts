@@ -1,5 +1,6 @@
-const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
+//change these with import statements below
+import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
   content: [
@@ -32,6 +33,8 @@ module.exports = {
         amber: colors.amber,
         sky: colors.sky,
       },
+      
+    
       typography: (theme: (arg0: string) => any) => ({
         DEFAULT: {
           css: {
@@ -109,6 +112,10 @@ module.exports = {
         },
       }),
     },
+    
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+  ],
 };

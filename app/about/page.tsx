@@ -12,7 +12,22 @@ import React from "react";
 import { Button } from "@/components/Button";
 import { ButtonType } from "@/shared/lib/types";
 import { useTheme } from "next-themes";
-import Skills from "./skills/skills";
+import { motion } from "framer-motion";
+import { skillsData } from "@/shared/lib/data";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.05,
+    },
+  }),
+};
 
 export default function About() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -60,7 +75,7 @@ export default function About() {
 
       <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
       <div className="mt-12 space-y-6">
-        <h2 className="m-0 text-gray-900 dark:text-white">Education =</h2>
+        <h2 className="m-0 text-gray-900 dark:text-white">Education</h2>
         <VerticalTimeline lineColor="#94a3b8">
           {educationData.map((item, index) => {
             return (
@@ -106,8 +121,27 @@ export default function About() {
         </VerticalTimeline>
         <hr className="hr"></hr>
       </div>
-      <div className="content-container m-auto space-y-32">
-        <Skills />
+      <div className=" mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
+        <h2 className="m-0 text-gray-900 dark:text-white">Skills =</h2>
+        <ul className="flex flex-wrap justify-center gap-2 text-base text-gray-800">
+          {skillsData.map((skill, index) => {
+            return (
+              <motion.li
+                className="border border-black/10 sm:rounded-xl "
+                key={index}
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+                custom={index}
+              >
+                {skill}
+              </motion.li>
+            );
+          })}
+        </ul>
       </div>
     </Container>
   );

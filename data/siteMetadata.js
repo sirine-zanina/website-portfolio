@@ -10,7 +10,7 @@ export const siteMetadata = {
   avatarImage: "/static/my_photo.jpg",
   email: "mailto:sirinezanina@outlook.com",
   github: "https://github.com/sirine-zanina",
-  linkedin: "www.linkedin.com/in/sirine-zanina",
+  linkedin: "https://www.linkedin.com/in/sirine-zanina",
   resume: "/static/Sirine_ZaninaCV.pdf",
 
   locale: "en-US",
