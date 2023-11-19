@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <Container>
       <Hero />
-      
       <Projects />
+      <hr className="hr"></hr>
+
     </Container>
   );
 }

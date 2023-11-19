@@ -1,6 +1,71 @@
 import React from "react";
 
 import { LuGraduationCap } from "react-icons/lu";
+import corpcommentImg from "@/public/corpcomment.png";
+import rmtdevImg from "@/public/rmtdev.png";
+import worldanalyticsImg from "@/public/wordanalytics.png";
+
+export const links = [
+  {
+    name: "Home",
+    hash: "#home",
+  },
+  {
+    name: "About",
+    hash: "#about",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
+    name: "Skills",
+    hash: "#skills",
+  },
+  {
+    name: "Education",
+    hash: "#education",
+  },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
+] as const;
+
+export const projectsData = [
+  {
+    title: "E-Learning",
+    description:
+      " Design and development of a learning management system (LMS) with functions such as user authentication, course management, content delivery, communication with users and statistics",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      " Express.js",
+      "MongoDB",
+      "Redis ",
+      " Socket.io.",
+    ],
+    imageUrl: worldanalyticsImg,
+    githubUrl: "https://github.com/sirine-zanina/techNotes",
+  },
+  {
+    title: "Admin Dashboard",
+    description:
+      "Design and development of an administrative dashboard that allows users to visualize customer and product data",
+    tags: ["React", "Material UI", "MongoDB", "Node JS", "Express JS"],
+    imageUrl: corpcommentImg,
+    githubUrl: "https://github.com/sirine-zanina/techNotes",
+  },
+  {
+    title: "TechNotes",
+    description:
+      "Design and development of a web application that allows users to register and authenticate themselves in order to manage their notes. The application uses access control and permissions based on the user's role, as well as JWT authorization.",
+    tags: ["React", "Node JS", "Express JS", "MongoDB"],
+    imageUrl: rmtdevImg,
+    githubUrl: "https://github.com/sirine-zanina/techNotes",
+  },
+] as const;
 
 export const skillsData = [
   "HTML",

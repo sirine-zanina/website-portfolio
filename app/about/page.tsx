@@ -75,7 +75,9 @@ export default function About() {
 
       <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
       <div className="mt-12 space-y-6">
-        <h2 className="m-0 text-gray-900 dark:text-white">Education</h2>
+        <h2 className="m-0 text-gray-900 dark:text-white text-center">
+          Education
+        </h2>
         <VerticalTimeline lineColor="#94a3b8">
           {educationData.map((item, index) => {
             return (
@@ -102,9 +104,7 @@ export default function About() {
                   icon={item.icon}
                   iconStyle={{
                     background:
-                      resolvedTheme === "dark"
-                        ? "rgba(255, 255, 255, 0.15)"
-                        : "white",
+                      resolvedTheme === "dark" ? "rgba(0, 0, 0, 0.9)" : "white",
                     fontSize: "1.5rem",
                     visibility: "visible",
                   }}
@@ -119,15 +119,15 @@ export default function About() {
             );
           })}
         </VerticalTimeline>
-        <hr className="hr"></hr>
+        <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>{" "}
       </div>
       <div className=" mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
-        <h2 className="m-0 text-gray-900 dark:text-white">Skills =</h2>
-        <ul className="flex flex-wrap justify-center gap-2 text-base text-gray-800">
+        <h2 className="m-0 text-gray-900 dark:text-white">Skills</h2>
+        <ul className="list-none flex flex-wrap gap-1 sm:mt-auto pl-0">
           {skillsData.map((skill, index) => {
             return (
               <motion.li
-                className="border border-black/10 sm:rounded-xl "
+                className="px-3 py-1 text-[0.8rem] border border-black/10 text-black rounded-full dark:bg-white/[0.8] dark:text-black"
                 key={index}
                 variants={fadeInAnimationVariants}
                 initial="initial"

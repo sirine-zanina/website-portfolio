@@ -15,67 +15,24 @@ import { Pagination } from "swiper/modules";
 
 // components
 import ProjectCard from "@/components/ProjectCard";
-
-export interface Project {
-  image: string;
-  category: string;
-  name: string;
-  description: string;
-  link: string;
-  github: string;
-}
-type projectDataType = Project[];
-
-const projectData: projectDataType = [
-  {
-    image: "/public/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: "https://nexa.netlify.app/",
-    github: "https://github.com",
-  },
-  {
-    image: "/public/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: "https://nexa.netlify.app/",
-    github: "https://github.com",
-  },
-  {
-    image: "/public/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: "https://nexa.netlify.app/",
-    github: "https://github.com",
-  },
-];
+import { projectsData } from "@/shared/lib/data";
 
 export default function Projects() {
   return (
-    <section className="relative mb-12 xl:mb-48">
-      <div className="container mx-auto">
+    <section className="relative mb-16 mt-12 xl:mb-48 xl:ml-0">
+      <div className="container mx-auto ">
         {/* text*/}
-        <div className="bg-pink-100 max-w-[300px] mx-auto xl:mx-0 text-center xl:text-left mb-12 flex flex-col justify-center items-center xl:items-start">
+        <div className="max-w-[300px] mx-auto xl:mx-0 text-center xl:text-left mb-12 flex flex-col justify-center items-center xl:items-start ">
           <h2 className="mb-4">Latest Projects</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At odit
-            dolore consequatur a qui provident ipsa corrupti omnis repudiandae,
-            quis velit cum reprehenderit excepturi{" "}
-          </p>
+          <p>Some of the project I've built.</p>
           <Link href="/projects">
             <Button buttonType={ButtonType.PRIMARY}>See all projects</Button>
           </Link>
         </div>
         {/* slider */}
-        <div className="xl:max-w-[800px] xl:absolute right-0 top-0">
+        <div className=" xl:max-w-[700px] xl:max-h-[450px] xl:absolute right-0 top-0">
           <Swiper
-            className="h-[480px] bg-pink-100 "
+            className="h-[430px]"
             slidesPerView={1}
             breakpoints={{
               640: {
@@ -87,16 +44,17 @@ export default function Projects() {
             pagination={{ clickable: true }}
           >
             {/* show only the first 4 projects for the slides */}
-            {projectData.slice(0, 4).map((project, index) => {
+            {projectsData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <ProjectCard project={project} />
+                  <ProjectCard {...project} />
                 </SwiperSlide>
               );
             })}
           </Swiper>
         </div>
       </div>
+      <br />
     </section>
   );
 }
