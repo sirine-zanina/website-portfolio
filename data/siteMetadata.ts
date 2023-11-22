@@ -6,7 +6,7 @@ export const siteMetadata = {
     "I'm Sirine. I'm a full-stack developer, blogger and designer. Welcome to my corner of the internet. I'm glad you're here!",
   language: "en-us",
   // siteUrl: "https://SirineZanina.dev",
-  // siteRepo: "https://github.com/sirine-zanina/SirineZanina.dev",
+  siteRepo: "https://github.com/sirinezanina/website-portfolio",
   avatarImage: "/static/my_photo.jpg",
   email: "mailto:sirinezanina@outlook.com",
   github: "https://github.com/sirine-zanina",
