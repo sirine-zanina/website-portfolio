@@ -45,14 +45,15 @@ export default function About() {
       </h1>
 
       <p>
-        I’m Sirine, a full-stack developer based in Sousse. I'm passionate about
-        building and shipping high-quality software that scales, with a focus on
-        delivering a great user experience. I'm currently a 3rd year student at
-        Higher Institute of Computer Science and Communication Technologies of
-        Hammam Sousse. During my academic experience, I've been involved in many
-        projects that taught me the fundamentals of front-end and back-end web
-        development, as well as software design and architecture. I'm currently
-        looking for and end-of-studies Internship starting from February 2022.
+        I&apos;m Sirine, a full-stack developer based in Sousse. I&apos;m
+        passionate about building and shipping high-quality software that
+        scales, with a focus on delivering a great user experience. I&apos;m
+        currently a 3rd year student at Higher Institute of Computer Science and
+        Communication Technologies of Hammam Sousse. During my academic
+        experience, I&apos;ve been involved in many projects that taught me
+        the fundamentals of front-end and back-end web development, as well as
+        software design and architecture. I`&apos;m currently looking for and
+        end-of-studies Internship starting from February 2022.
       </p>
       <div>
         <p>
