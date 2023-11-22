@@ -14,7 +14,7 @@ export function Footer() {
                 <h3 className="text-sm font-semibold tracking-wider uppercase">
                   General
                 </h3>
-                <div role="list" className="mt-4 space-y-4">
+                <div className="mt-4 space-y-4">
                   {navigation.general.map((item) => (
                     <Link
                       key={item.name}
@@ -33,7 +33,7 @@ export function Footer() {
                 <h3 className="text-sm font-semibold tracking-wider uppercase">
                   Extra
                 </h3>
-                <div role="list" className="mt-4 space-y-4">
+                <div className="mt-4 space-y-4">
                   <a
                     target="_blank"
                     href={siteMetadata.resume}
