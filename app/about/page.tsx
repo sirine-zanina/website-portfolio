@@ -2,7 +2,7 @@
 import CustomLink from "@/components/CustomLink";
 import { siteMetadata } from "@/data/siteMetadata";
 import { Container } from "@/layouts/Container";
-import { educationData } from "@/shared/lib/data";
+import { educationData } from "@/lib/data";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,10 +10,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import React from "react";
 import { Button } from "@/components/Button";
-import { ButtonType } from "@/shared/lib/types";
+import { ButtonType } from "@/lib/types";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
-import { skillsData } from "@/shared/lib/data";
+
+import { skillCategories } from "./Skills/skill-categories";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -64,11 +65,11 @@ export default function About() {
       </div>
       <div className="space-y-6 text-center md:text-left md:space-y-0 md:space-x-4">
         <a href={siteMetadata.resume} download>
-          <Button buttonType={ButtonType.PRIMARY}>Download my CV.</Button>
+          <Button buttonType={ButtonType.TERTIARY}>Download my CV</Button>
         </a>
         <a href={siteMetadata.resume} download>
-          <Button buttonType={ButtonType.SECONDARY}>
-            Download my Motivation Letter.
+          <Button buttonType={ButtonType.QUATERNARY}>
+            Download my Motivation Letter
           </Button>
         </a>
       </div>
@@ -104,7 +105,7 @@ export default function About() {
                   icon={item.icon}
                   iconStyle={{
                     background:
-                      resolvedTheme === "dark" ? "rgba(0, 0, 0, 0.9)" : "white",
+                      resolvedTheme === "dark" ? "rgba(0, 0, 0, 1)" : "white",
                     fontSize: "1.5rem",
                     visibility: "visible",
                   }}
@@ -118,13 +119,15 @@ export default function About() {
         </VerticalTimeline>
         <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>{" "}
       </div>
-      <div className=" mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
-        <h2 className="m-0 text-gray-900 dark:text-white">Skills</h2>
-        <ul className="list-none flex flex-wrap gap-1 sm:mt-auto pl-0">
-          {skillsData.map((skill, index) => {
+
+      {/* Skills Section */}
+      <h2 className="m-0 text-gray-900 dark:text-white text-center">Skills</h2>
+
+      <div className=" text-black dark:text-white mb-28 max-w-[53rem] scroll-mt-28 text-right sm:mb-40">
+        <ul className=" flex flex-col gap-1 mt-[O.2rem] sm:mt-1 pl-1">
+          {skillCategories.map((skill, index) => {
             return (
               <motion.li
-                className="px-3 py-1 text-[0.8rem] border border-black/10 text-black rounded-full dark:bg-white/[0.8] dark:text-black"
                 key={index}
                 variants={fadeInAnimationVariants}
                 initial="initial"
@@ -134,7 +137,27 @@ export default function About() {
                 }}
                 custom={index}
               >
-                {skill}
+                {skill.title}
+                <ul className="!list-none flex flex-wrap gap-1 pl-0">
+                  {skill.skillList.map((skill, index) => {
+                    return (
+                      <motion.li
+                        className="relative flex items-center justify-center bg-gray-100 border border-black/10 rounded-full px-5 py-1 dark:bg-white/10 dark:text-white/80"
+                        key={index}
+                        variants={fadeInAnimationVariants}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{
+                          once: true,
+                        }}
+                        custom={index}
+                      >
+                        <span>{skill.icon({})}</span>
+                        <span>{skill.title}</span>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
               </motion.li>
             );
           })}

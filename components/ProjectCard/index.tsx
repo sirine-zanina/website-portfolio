@@ -1,57 +1,79 @@
 "use client";
-
-import React from "react";
-import Link from "next/link";
+import { projectsData } from "@/lib/data";
+import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
-import { Card, CardHeader } from "@/components/ui/card";
-import { Github, Link2Icon } from "lucide-react";
-import { projectsData } from "@/shared/lib/data";
+import { useRef } from "react";
+import GitHubLogo from "@/components/Shared/icons/Github";
+import Link from "@/components/Shared/Link/Link";
+import { getGitHubOwnerAndRepoFromLink } from "@/util/helpers";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function ProjectCard({
+export default function Project({
   title,
   description,
   tags,
   imageUrl,
   githubUrl,
 }: ProjectProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
   return (
-    <Card className="group overflow-hidden relative dark:bg-slate-800">
-      <CardHeader className="p-0 ">
-        {/* image */}
-        <div className="relative w-full h-[150px] flex items-center justify-center mb-0 mt-10">
-          <Image
-            className="absolute pb-0 shadow-md"
-            src={imageUrl}
-            width={220}
-            height={80}
-            alt=""
-            priority
-          />
-          {/* btn links */}
-          <Link
-            href={githubUrl}
-            className="bg-slate-800	
-              w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
-          >
-            <Github className="text-white" />
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className="group mb-3 sm:mb-8 last:mb-0"
+    >
+      <section className="bg-gray-100 max-w-[60rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[26rem]">
+          <h3 className="text-2xl font-semibold">{title}</h3>
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            {description}
+          </p>
+          <ul className="!list-none	flex flex-wrap mt-1 sm:mt-1 gap-1 pl-0">
+            {tags.map((tag, index) => (
+              <li
+                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase text-white rounded-full dark:text-white/70"
+                key={index}
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
+          <Link href={githubUrl} icon={<GitHubLogo />} noHighlight>
+            {getGitHubOwnerAndRepoFromLink(githubUrl)}
           </Link>
         </div>
-      </CardHeader>
-      <div className="h-[160px] px-8 py-1 ">
-        <h4 className="h4 mb-1">{title}</h4>
-        <ul className="list-none flex flex-wrap mt-1 gap-1 sm:mt-auto pl-0">
-          {tags.map((tag, index) => (
-            <li
-              className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-normal text-white rounded-full dark:bg-white/[0.8] dark:text-black"
-              key={index}
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Card>
+
+        <Image
+          src={imageUrl}
+          alt="Project I worked on"
+          quality={95}
+          className="absolute hidden sm:block top-4 -right-2 w-[30rem] rounded-t-lg shadow-2xl 
+             transition
+             group-hover:scale-[1.04]
+             group-hover:-translate-x-3
+             group-hover:-translate-y-3
+             group-hover:-rotate-2
+ 
+             group-even:group-hover:translate-x-3
+             group-even:group-hover:translate-y-3
+             group-even:group-hover:rotate-2
+ 
+             group-even:-right-[initial] group-even:-left-10
+             "
+        />
+      </section>
+    </motion.div>
   );
 }

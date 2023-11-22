@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteMetadata } from "@/data/siteMetadata";
-import { navigation } from "@/shared/lib/navigation";
+import { navigation } from "@/components/Nav/navigation";
 
 export function Footer() {
   return (

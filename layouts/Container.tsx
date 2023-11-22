@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/legacy/image";
 import Nav from "@/components/Nav";
 import { PageTransition } from "@/components/PageTransition";
-import { PageType } from "@/shared/lib/types";
+import { PageType } from "@/lib/types";
 import TopRays from "public/rays.png";
 import { siteMetadata } from "@/data/siteMetadata";
 

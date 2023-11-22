@@ -2,17 +2,17 @@ export enum Form {
   Initial,
   Loading,
   Success,
-  Error
+  Error,
 }
 
 export enum AdType {
   ARTICLE,
-  RESPONSIVE
+  RESPONSIVE,
 }
 
 export enum PageType {
-  WEBSITE = 'website',
-  ARTICLE = 'article'
+  WEBSITE = "website",
+  ARTICLE = "article",
 }
 
 export type FormState = {
@@ -21,8 +21,8 @@ export type FormState = {
 };
 
 export enum SubscribeSize {
-  SMALL = 'small',
-  LARGE = 'large'
+  SMALL = "small",
+  LARGE = "large",
 }
 
 export type SocialFollowers = {
@@ -38,9 +38,11 @@ export type Views = {
 };
 
 export enum ButtonType {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  TERTIARY = 'tertiary'
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  TERTIARY = "tertiary",
+  QUATERNARY = "quaternary",
+  QUINARY = "quinary",
 }
 
 export type Article = {
@@ -68,35 +70,35 @@ export type WorkTimeline = {
 };
 
 export type Language =
-  | 'markup'
-  | 'bash'
-  | 'clike'
-  | 'c'
-  | 'cpp'
-  | 'css'
-  | 'javascript'
-  | 'jsx'
-  | 'coffeescript'
-  | 'actionscript'
-  | 'css-extr'
-  | 'diff'
-  | 'git'
-  | 'go'
-  | 'graphql'
-  | 'handlebars'
-  | 'json'
-  | 'less'
-  | 'makefile'
-  | 'markdown'
-  | 'objectivec'
-  | 'ocaml'
-  | 'python'
-  | 'reason'
-  | 'sass'
-  | 'scss'
-  | 'sql'
-  | 'stylus'
-  | 'tsx'
-  | 'typescript'
-  | 'wasm'
-  | 'yaml';
+  | "markup"
+  | "bash"
+  | "clike"
+  | "c"
+  | "cpp"
+  | "css"
+  | "javascript"
+  | "jsx"
+  | "coffeescript"
+  | "actionscript"
+  | "css-extr"
+  | "diff"
+  | "git"
+  | "go"
+  | "graphql"
+  | "handlebars"
+  | "json"
+  | "less"
+  | "makefile"
+  | "markdown"
+  | "objectivec"
+  | "ocaml"
+  | "python"
+  | "reason"
+  | "sass"
+  | "scss"
+  | "sql"
+  | "stylus"
+  | "tsx"
+  | "typescript"
+  | "wasm"
+  | "yaml";

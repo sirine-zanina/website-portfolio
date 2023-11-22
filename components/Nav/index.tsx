@@ -78,7 +78,6 @@ export default function Nav() {
         <nav className="hidden space-x-8 text-lg md:flex">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
-          <NavItem href="/skills" text="Skills" />
           <NavItem href="/projects" text="Projects" />
           <NavItem href="/contact" text="Contact" />
         </nav>

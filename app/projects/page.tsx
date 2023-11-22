@@ -1,7 +1,7 @@
 import React from "react";
-import Project from "@/components/Projects/ProjectCard";
+import Project from "@/components/ProjectCard";
 import { Container } from "@/layouts/Container";
-import { projectsData } from "@/shared/lib/data";
+import { projectsData } from "@/lib/data";
 
 export default function Projects() {
   return (

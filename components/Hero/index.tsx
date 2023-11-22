@@ -1,7 +1,7 @@
 "use client";
 import { siteMetadata } from "@/data/siteMetadata";
 import Link from "next/link";
-import { ButtonType } from "@/shared/lib/types";
+import { ButtonType } from "@/lib/types";
 
 import { Button } from "@/components/Button";
 import { FaPaperPlane } from "react-icons/fa";
@@ -34,11 +34,11 @@ export default function Hero() {
             />
           </div>
         </div>
-        <div className="space-y-6 text-center md:text-left md:space-y-0 md:space-x-4">
+        <div className="space-y-6 text-center md:text-left md:space-y-0 md:space-x-4 ">
           <Link href="/contact">
-            <Button buttonType={ButtonType.PRIMARY}>
+            <Button buttonType={ButtonType.QUINARY}>
               Contact me&nbsp;
-              <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 " />
+              <FaPaperPlane className="text-xs opacity-90 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 " />
             </Button>
           </Link>
           <Link href="/about">

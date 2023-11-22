@@ -13,3 +13,4 @@ const cleanLink = (link: string): string => {
 };
 
 export { capitalize, getGitHubOwnerAndRepoFromLink, cleanLink };
+
