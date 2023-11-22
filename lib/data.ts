@@ -12,7 +12,7 @@ export const projectsData = [
       "This application is a software-as-a-service (SaaS) platform that allows users to authenticate themselves in order to chat with their pdfs and enjoy more benefits as premium users.",
     tags: ["React", "TailwindCSS", "Next.js", "NextAuth.js", "Prisma", "tRPC "],
     imageUrl: saasPlatformImg,
-    githubUrl: "https://github.com/sirinezanina/kairi",
+    githubUrl: "https://github.com/sirine-zanina/kairi",
   },
   {
     title: "Admin Dashboard",
@@ -20,7 +20,7 @@ export const projectsData = [
       "Design and development of an administrative dashboard that allows users to visualize customer and product data",
     tags: ["React", "Material UI", "MongoDB", "Node JS", "Express JS"],
     imageUrl: dashboardAdminImg,
-    githubUrl: "https://github.com/sirinezanina/Dashboard-admin",
+    githubUrl: "https://github.com/sirine-zanina/Dashboard-admin",
   },
   {
     title: "TechNotes",
@@ -28,7 +28,7 @@ export const projectsData = [
       "TechNotes is a full-stack MERN application that uses access control and permissions based on the user's role, as well as JWT authorization.",
     tags: ["React", "Node JS", "Express JS", "MongoDB"],
     imageUrl: technotesImg,
-    githubUrl: "https://github.com/sirinezanina/techNotes",
+    githubUrl: "https://github.com/sirine-zanina/techNotes",
   },
 ] as const;
 
