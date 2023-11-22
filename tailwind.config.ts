@@ -78,9 +78,9 @@ module.exports = {
             "h1,h2,h3,h4": {
               color: theme("colors.gray.900"),
             },
-            hr: { borderColor: theme("colors.gray.700") },
             strong: { color: theme("colors.gray.700") },
             hr: {
+              borderColor: theme("colors.gray.700"),
               color: theme("colors.gray.200"),
               "&before": { content: "∿∿∿" },
             },
