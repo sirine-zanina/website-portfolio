@@ -235,16 +235,9 @@ export default function Nav() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" passHref>
+                <Link href="/contact" passHref>
                   <span className="hover:text-teal-400 dark:hover:text-teal-500">
-                    Blog
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/community-wall" passHref>
-                  <span className="hover:text-teal-400 dark:hover:text-teal-500">
-                    Community wall
+                    Contact
                   </span>
                 </Link>
               </li>

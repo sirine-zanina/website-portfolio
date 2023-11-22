@@ -46,9 +46,9 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center mt-12 md:mt-24">
+      {/* <div className="flex justify-center mt-12 md:mt-24">
         <RiArrowDownSLine className="text-3xl animate-bounce" />
-      </div>
+      </div> */}
     </div>
   );
 }

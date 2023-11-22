@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import SubmitBtn from "@/components/SubmitBtn";
 import { Container } from "@/layouts/Container";
 import { siteMetadata } from "@/data/siteMetadata";
+import { sendEmail } from "@/actions/sendEmails";
+import toast from "react-hot-toast";
 
 export default function page() {
   return (
@@ -38,20 +40,20 @@ export default function page() {
         </p>
 
         <form
-          className="mt-10 flex flex-col text-black dark:text-black"
-          // action={async (formData) => {
-          //   const { data, error } = await sendEmail(formData);
+          className="mt-10 flex flex-col dark:text-black"
+          action={async (formData) => {
+            const { data, error } = await sendEmail(formData);
 
-          //   if (error) {
-          //     toast.error(error);
-          //     return;
-          //   }
+            if (error) {
+              toast.error(error);
+              return;
+            }
 
-          //   toast.success("Email sent successfully!");
-          // }}
+            toast.success("Email sent successfully!");
+          }}
         >
           <input
-            className="h-14 px-4 rounded-lg border border-black/10 transition-all dark:outline-none"
+            className="h-14 px-4 rounded-lg border border-black/10 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none "
             name="senderEmail"
             type="email"
             required
@@ -64,8 +66,8 @@ export default function page() {
             className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
             name="message"
           ></textarea>
+          <SubmitBtn />
         </form>
-        <SubmitBtn />
       </motion.section>
     </Container>
   );
