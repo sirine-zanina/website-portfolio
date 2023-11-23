@@ -12,6 +12,7 @@ export const siteMetadata = {
   github: "https://github.com/sirine-zanina",
   linkedin: "https://www.linkedin.com/in/sirine-zanina",
   resume: "/static/Sirine_ZaninaCV.pdf",
+  cover_letter: "/static/Proxym_LettreMotivation.pdf",
   phone: "+216 51 906 020",
   address: "Sousse, Tunisia",
 

@@ -44,6 +44,7 @@ export default function Hero() {
           <Link href="/about">
             <Button buttonType={ButtonType.SECONDARY}>More about me</Button>
           </Link>
+      
         </div>
       </div>
       {/* <div className="flex justify-center mt-12 md:mt-24">

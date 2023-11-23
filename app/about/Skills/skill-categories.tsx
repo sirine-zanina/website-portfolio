@@ -1,7 +1,6 @@
 import { IconType } from "react-icons";
 import {
   SiAdobephotoshop,
-  SiAmazonaws,
   SiCss3,
   SiDocker,
   SiExpress,
@@ -19,19 +18,15 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
-  SiRust,
   SiTailwindcss,
   SiTypescript,
-  SiWindows,
   SiVuedotjs,
   SiCplusplus,
   SiPhp,
   SiAngular,
   SiSpringboot,
-  SiJquery,
   SiGraphql,
   SiVercel,
-  SiHeroku,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -72,11 +67,6 @@ export const skillCategories: {
         title: "Typescript",
         icon: SiTypescript,
         color: "#3178C6",
-      },
-      {
-        title: "Rust",
-        icon: SiRust,
-        color: "#F74C00",
       },
       {
         title: "Bash",
@@ -181,11 +171,6 @@ export const skillCategories: {
     title: "Infrastructure and DevOps",
     skillList: [
       {
-        title: "Heroku",
-        icon: SiHeroku,
-        color: "#430098",
-      },
-      {
         title: "Docker",
         icon: SiDocker,
         color: "#2496ED",
@@ -196,11 +181,6 @@ export const skillCategories: {
         color: "#FCC624",
       },
 
-      {
-        title: "AWS",
-        icon: SiAmazonaws,
-        color: "#232F3E",
-      },
       {
         title: "Github",
         icon: SiGithub,

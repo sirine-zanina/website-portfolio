@@ -1,5 +1,4 @@
 "use client";
-import CustomLink from "@/components/CustomLink";
 import { siteMetadata } from "@/data/siteMetadata";
 import { Container } from "@/layouts/Container";
 import { educationData } from "@/lib/data";
@@ -48,19 +47,19 @@ export default function About() {
         I&apos;m Sirine, a full-stack developer based in Sousse. I&apos;m
         passionate about building and shipping high-quality software that
         scales, with a focus on delivering a great user experience. I&apos;m
-        currently a 3rd year student at Higher Institute of Computer Science and
-        Communication Technologies of Hammam Sousse. During my academic
-        experience, I&apos;ve been involved in many projects that taught me
-        the fundamentals of front-end and back-end web development, as well as
-        software design and architecture. I`&apos;m currently looking for and
-        end-of-studies Internship starting from February 2022.
+        currently a 3rd year student at the Higher Institute of Computer Science
+        and Communication Technologies of Hammam Sousse. During my academic
+        experience, I&apos;ve been involved in many projects that taught me the
+        fundamentals of front-end and back-end web development, as well as
+        software design and architecture. I&apos;m currently looking for and
+        end-of-studies Internship starting from January 2024.
       </p>
       <div>
         <p>
-          You can follow me on{" "}
-          <CustomLink href={siteMetadata.github}>GitHub</CustomLink>. or on
-          LinkedIn for more information about my professional experience.
-          <CustomLink href={siteMetadata.linkedin}>LinkedIn</CustomLink>.
+          You can follow me on <a href={siteMetadata.github}>GitHub</a>, or
+          on&nbsp;
+          <a href={siteMetadata.linkedin}>LinkedIn</a> for more information
+          about my professional experiences.
         </p>
         <div></div>
       </div>
@@ -68,7 +67,7 @@ export default function About() {
         <a href={siteMetadata.resume} download>
           <Button buttonType={ButtonType.TERTIARY}>Download my CV</Button>
         </a>
-        <a href={siteMetadata.resume} download>
+        <a href={siteMetadata.cover_letter} download>
           <Button buttonType={ButtonType.QUATERNARY}>
             Download my Motivation Letter
           </Button>

@@ -60,8 +60,11 @@ export function Footer() {
               </a>
             ))}
           </div>
-          <p className="order-1 text-base">
-            &copy; {new Date().getFullYear()} {siteMetadata.author}
+
+          <p className="order-1 text-base ">
+            <span className="font-semibold">About this website:</span> built
+            with React & Next.js, TypeScript, Tailwind CSS, Framer Motion, React
+            Email & Resend, Vercel hosting.
           </p>
         </div>
       </footer>

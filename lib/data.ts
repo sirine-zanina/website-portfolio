@@ -4,16 +4,25 @@ import { LuGraduationCap } from "react-icons/lu";
 import dashboardAdminImg from "@/public/dashboard_admin.png";
 import technotesImg from "@/public/technotes.png";
 import saasPlatformImg from "@/public/saas_platform.png";
+import gestionStockImg from "@/public/gestion_de_stock.png";
 
 export const projectsData = [
   {
-    title: "SaaS Platform",
+    title: "Gestion de stock",
     description:
-      "This application is a software-as-a-service (SaaS) platform that allows users to authenticate themselves in order to chat with their pdfs and enjoy more benefits as premium users.",
-    tags: ["React", "TailwindCSS", "Next.js", "NextAuth.js", "Prisma", "tRPC "],
-    imageUrl: saasPlatformImg,
-    githubUrl: "https://github.com/sirine-zanina/kairi",
+      "Design and development of an administrative dashboard that allows users to visualize customer and product data",
+    tags: ["REST API", "Spring Boot", "Angular"],
+    imageUrl: gestionStockImg,
+    githubUrl: "https://github.com/sirine-zanina/gestion-de-stock",
   },
+  // {
+  //   title: "SaaS Platform",
+  //   description:
+  //     "This application is a software-as-a-service (SaaS) platform that allows users to authenticate themselves in order to chat with their pdfs and enjoy more benefits as premium users.",
+  //   tags: ["React", "TailwindCSS", "Next.js", "NextAuth.js", "Prisma", "tRPC "],
+  //   imageUrl: saasPlatformImg,
+  //   githubUrl: "https://github.com/sirine-zanina/kairi",
+  // },
   {
     title: "Admin Dashboard",
     description:
@@ -26,33 +35,10 @@ export const projectsData = [
     title: "TechNotes",
     description:
       "TechNotes is a full-stack MERN application that uses access control and permissions based on the user's role, as well as JWT authorization.",
-    tags: ["React", "Node JS", "Express JS", "MongoDB"],
+    tags: ["React", "Node JS", "Express JS", "MongoDB", "REST API"],
     imageUrl: technotesImg,
     githubUrl: "https://github.com/sirine-zanina/techNotes",
   },
-] as const;
-
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux",
-  "Next.js",
-  "Angular",
-  "TailwindCSS",
-  "Framer Motion",
-  "Material UI",
-  "Python",
-  "Java",
-  "Spring Boot",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
-  "MySQL",
-  "Prisma",
 ] as const;
 
 export const educationData = [
