@@ -10,7 +10,7 @@ export const projectsData = [
   {
     title: "Gestion de stock",
     description:
-      "Design and development of an administrative dashboard that allows users to visualize customer and product data",
+      "Design and development of an application that allows a company administrator to register manage items, stock, customers and their orders.",
     tags: ["REST API", "Spring Boot", "Angular"],
     imageUrl: gestionStockImg,
     githubUrl: "https://github.com/sirine-zanina/gestion-de-stock",
