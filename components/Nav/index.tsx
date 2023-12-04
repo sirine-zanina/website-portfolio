@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import DarkLogo from "public/bcoyerlogo_dark.svg";
+import DarkLogo from "public/sirinelogowhite.png";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
-import LightLogo from "public/bcoyerlogo_white.svg";
+import LightLogo from "public/sirinelogodark.png";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { NavItem } from "./NavItem";
@@ -29,7 +29,6 @@ export default function Nav() {
                 height={38}
                 width={38}
                 src={DarkLogo}
-                blurDataURL={DarkLogo}
                 className="rounded-full"
               />
             </span>
@@ -41,7 +40,6 @@ export default function Nav() {
                 height={38}
                 width={38}
                 src={LightLogo}
-                blurDataURL={LightLogo}
                 className="rounded-full"
               />
             </span>

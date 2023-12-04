@@ -12,6 +12,7 @@ import { Button } from "@/components/Button";
 import { ButtonType } from "@/lib/types";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
+import ReactPlayer from "react-player";
 
 import { skillCategories } from "./Skills/skill-categories";
 
@@ -43,35 +44,48 @@ export default function About() {
         </span>
       </h1>
 
-      <p>
-        I&apos;m Sirine, a full-stack developer based in Sousse. I&apos;m
-        passionate about building and shipping high-quality software that
-        scales, with a focus on delivering a great user experience. I&apos;m
-        currently a 3rd year student at the Higher Institute of Computer Science
-        and Communication Technologies of Hammam Sousse. During my academic
-        experience, I&apos;ve been involved in many projects that taught me the
-        fundamentals of front-end and back-end web development, as well as
-        software design and architecture. I&apos;m currently looking for and
-        end-of-studies Internship starting from January 2024.
-      </p>
-      <div>
-        <p>
-          You can follow me on <a href={siteMetadata.github}>GitHub</a>, or
-          on&nbsp;
-          <a href={siteMetadata.linkedin}>LinkedIn</a> for more information
-          about my professional experiences.
-        </p>
-        <div></div>
-      </div>
-      <div className="space-y-6 text-center md:text-left md:space-y-0 md:space-x-4">
-        <a href={siteMetadata.resume} download>
-          <Button buttonType={ButtonType.TERTIARY}>Download my CV</Button>
-        </a>
-        <a href={siteMetadata.cover_letter} download>
-          <Button buttonType={ButtonType.QUATERNARY}>
-            Download my Motivation Letter
-          </Button>
-        </a>
+      <div className="content flex py-2">
+        <div className="flex flex-col ">
+          <p>
+            My name is Sirine Zanina and I&apos;m a full-stack web developer
+            based in Sousse. I&apos;m currently looking for an end of studies
+            internship. I&apos;m passionate about building and shipping
+            high-quality software that evolves, with a focus on delivering an
+            exceptional user experience.
+          </p>
+          <div>
+            <p>
+              To view my previous projects, you can follow me on&nbsp;
+              <a href={siteMetadata.github}>GitHub</a>, or on&nbsp;
+              <a href={siteMetadata.linkedin}>LinkedIn</a> for more information
+              about my professional experience.
+            </p>
+            <div className="space-y-6 text-center md:text-left md:space-y-0 md:space-x-4">
+              <a href={siteMetadata.resume} download>
+                <Button buttonType={ButtonType.TERTIARY}>
+                  Download my CV.
+                </Button>
+              </a>
+              <a href={siteMetadata.cover_letter} download>
+                <Button buttonType={ButtonType.QUATERNARY}>
+                  Download my cover letter.
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="hidden sm:block sm:float-left">
+          <ReactPlayer
+            className="md:mr-8"
+            playing={true}
+            url="videos/cv_video.mp4"
+            width={340}
+            height={448}
+            controls={true}
+            loop={true}
+            fileConfig={{ attributes: { preload: "none" } }}
+          />{" "}
+        </div>
       </div>
 
       <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
