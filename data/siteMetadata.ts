@@ -3,7 +3,7 @@ export const siteMetadata = {
   author: "Sirine Zanina",
   headerTitle: "Sirine's Portfolio",
   description:
-    "I'm Sirine. I'm a full-stack developer, blogger and designer. Welcome to my corner of the internet. I'm glad you're here!",
+    "I'm Sirine. I'm a computer science student and a very curious individual. Welcome to my corner of the internet. I'm glad you're here!",
   language: "en-us",
   // siteUrl: "https://SirineZanina.dev",
   siteRepo: "https://github.com/sirinezanina/website-portfolio",
