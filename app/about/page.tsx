@@ -73,6 +73,7 @@ export default function About() {
           <ReactPlayer
             className="md:mr-8"
             url="videos/cv_video.mp4"
+            playing={true}
             width={340}
             height={448}
             controls={true}
