@@ -72,12 +72,10 @@ export default function About() {
         <div className="hidden sm:block sm:float-left">
           <ReactPlayer
             className="md:mr-8"
-            playing={true}
             url="videos/cv_video.mp4"
             width={340}
             height={448}
             controls={true}
-            loop={true}
             fileConfig={{ attributes: { preload: "none" } }}
           />{" "}
         </div>
