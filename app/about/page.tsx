@@ -66,11 +66,6 @@ export default function About() {
                   Download my CV.
                 </Button>
               </a>
-              <a href={siteMetadata.cover_letter} download>
-                <Button buttonType={ButtonType.QUATERNARY}>
-                  Download my cover letter.
-                </Button>
-              </a>
             </div>
           </div>
         </div>
