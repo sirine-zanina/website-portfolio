@@ -72,8 +72,8 @@ export default function About() {
         <div className="hidden sm:block sm:float-left">
           <ReactPlayer
             className="md:mr-8"
-            url="videos/cv_video.mp4"
             playing={true}
+            url="videos/cv_video.mp4"
             width={340}
             height={448}
             controls={true}
