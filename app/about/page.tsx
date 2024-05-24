@@ -69,7 +69,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="hidden sm:block sm:float-left">
+        {/* <div className="hidden sm:block sm:float-left">
           <ReactPlayer
             className="md:mr-8"
             url="videos/cv_video.mp4"
@@ -78,7 +78,7 @@ export default function About() {
             controls={true}
             fileConfig={{ attributes: { preload: "none" } }}
           />{" "}
-        </div>
+        </div> */}
       </div>
 
       <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
