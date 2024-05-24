@@ -48,8 +48,8 @@ export default function About() {
         <div className="flex flex-col ">
           <p>
             My name is Sirine Zanina and I&apos;m a full-stack web developer
-            based in Sousse. I&apos;m currently looking for an end of studies
-            internship. I&apos;m passionate about building and shipping
+            based in Sousse. I&apos;m currently looking for a job or a work-study opportunity.
+            I&apos;m passionate about building and shipping
             high-quality software that evolves, with a focus on delivering an
             exceptional user experience.
           </p>
