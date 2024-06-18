@@ -6,7 +6,6 @@ import {
   SiExpress,
   SiFigma,
   SiGithub,
-  SiGnubash,
   SiHtml5,
   SiJavascript,
   SiLinux,
@@ -20,12 +19,9 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
-  SiVuedotjs,
-  SiCplusplus,
   SiPhp,
   SiAngular,
   SiSpringboot,
-  SiGraphql,
   SiVercel,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
@@ -48,11 +44,11 @@ export const skillCategories: {
         icon: FaJava,
         color: "#f89820",
       },
-      {
-        title: "C++",
-        icon: SiCplusplus,
-        color: "#00599C",
-      },
+      // {
+      //   title: "C++",
+      //   icon: SiCplusplus,
+      //   color: "#00599C",
+      // },
       {
         title: "Python",
         icon: SiPython,
@@ -68,11 +64,11 @@ export const skillCategories: {
         icon: SiTypescript,
         color: "#3178C6",
       },
-      {
-        title: "Bash",
-        icon: SiGnubash,
-        color: "#4EAA25",
-      },
+      // {
+      //   title: "Bash",
+      //   icon: SiGnubash,
+      //   color: "#4EAA25",
+      // },
       {
         title: "PHP",
         icon: SiPhp,
@@ -108,11 +104,11 @@ export const skillCategories: {
         icon: SiNextdotjs,
         color: "#FFFFFF",
       },
-      {
-        title: "Vue.js",
-        icon: SiVuedotjs,
-        color: "#4FC08D",
-      },
+      // {
+      //   title: "Vue.js",
+      //   icon: SiVuedotjs,
+      //   color: "#4FC08D",
+      // },
       {
         title: "Angular",
         icon: SiAngular,
@@ -159,11 +155,11 @@ export const skillCategories: {
         icon: SiMongodb,
         color: "#47A248",
       },
-      {
-        title: "GraphQL",
-        icon: SiGraphql,
-        color: "#E10098",
-      },
+      // {
+      //   title: "GraphQL",
+      //   icon: SiGraphql,
+      //   color: "#E10098",
+      // },
     ],
   },
 
